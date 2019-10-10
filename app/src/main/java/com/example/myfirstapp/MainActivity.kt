@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.EditText
+import android.widget.Toast
 
 const val EXTRA_MESSAGE = "com.example.myfirstapp.MESSAGE"
 
@@ -23,6 +24,11 @@ class MainActivity : AppCompatActivity() {
             putExtra(EXTRA_MESSAGE, message)
         }
         startActivity(intent)
+    }
+
+    override fun onBackPressed() {
+        super.onBackPressed()
+        Toast.makeText(this, "Bye bye", Toast.LENGTH_SHORT).show()
     }
 
 }

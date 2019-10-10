@@ -10,16 +10,24 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
-        <activity android:name=".DisplayMessageActivity"
-            android:parentActivityName=".MainActivity">
-        </activity>
+        <activity android:name=".SplashActivity"
+            android:theme="@style/AppTheme.NoActionBar">
 
-        <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".DisplayMessageActivity"
+            android:parentActivityName=".MainActivity"> <!-- In order to have the arrow that takes me back to 'Home' Activity -->
+
+        </activity>
+
+        <activity android:name=".MainActivity">
+
         </activity>
 
     </application>
